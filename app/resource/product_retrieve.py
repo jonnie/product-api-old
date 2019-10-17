@@ -8,7 +8,7 @@ class ProductRetrieveResource:
         try:
             product = ProductData.get_instance().get_products().loc[id]
         except KeyError:
-            raise falcon.HTTPNotFound(description='Product with id {id} was not found'.format(id=id§))
+            raise falcon.HTTPNotFound(description='Product with id {id} was not found'.format(id=id))
 
         resp.status = falcon.HTTP_200
         resp.media = json.loads(product.to_json())
