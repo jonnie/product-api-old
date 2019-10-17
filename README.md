@@ -3,10 +3,6 @@
 ## Setting up the environment
 This guide assumes that Python 3 is already installed. To setup this project follow these instructions:
 
-    make create_env activate_env install
-
-Note: if you don't have `make` installed follow run this instead:
-
     python3 -m venv env
     . env/bin/activate
     pip install --upgrade pip
@@ -16,10 +12,6 @@ Note: if you get an error stating `python3` cannot be found simply replace this 
 
 ## Running the API app
 This project uses gunicorn to launch the api, to run this command:
-
-    make run
-
-Or, if you don't have `make` installed, run this instead:
 
     gunicorn -b 127.0.0.1:8000 app.api:app
 
